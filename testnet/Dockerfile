@@ -20,7 +20,7 @@ RUN mkdir data
 WORKDIR /dogeblock/counterpartyd_build
 RUN git clone https://github.com/Dogeparty/dogeblockd.git dist/counterblockd
 # RUN git checkout develop
-RUN yes | sudo python3 setup.py --with-counterblockd
+RUN sudo python3 setup.py --noninteractive --branch=master --with-counterblockd
 
 WORKDIR /dogeblock
 
