@@ -14,10 +14,10 @@ USER dogeblock
 ENV HOME /dogeblock
 
 WORKDIR /dogeblock
-RUN git clone https://github.com/CounterpartyXCP/counterpartyd_build
+RUN git clone https://github.com/Dogeparty/federatednode_build.git
 RUN mkdir data
 
-WORKDIR /dogeblock/counterpartyd_build
+WORKDIR /dogeparty/federatednode_build
 RUN git clone https://github.com/Dogeparty/dogeblockd.git dist/counterblockd
 # RUN git checkout develop
 RUN echo "n\nn" | sudo python3 setup.py --branch=master --with-counterblockd
