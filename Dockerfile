@@ -28,7 +28,3 @@ VOLUME /dogeblock/data
 
 EXPOSE 4100 4101 4102
 
-
-
-# vim: syn=ruby
-
