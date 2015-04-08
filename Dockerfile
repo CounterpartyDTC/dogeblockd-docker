@@ -17,9 +17,9 @@ WORKDIR /dogeblock
 RUN git clone https://github.com/Dogeparty/federatednode_build.git
 RUN mkdir data
 
-WORKDIR /dogeparty/federatednode_build
+WORKDIR /dogeblock/federatednode_build
 RUN git clone https://github.com/Dogeparty/dogeblockd.git dist/counterblockd
-# RUN git checkout develop
+RUN git clone https://github.com/Dogeparty/dogepartyd.git dist/counterpartyd
 RUN echo "n\nn" | sudo python3 setup.py --branch=master --with-counterblockd
 
 WORKDIR /dogeblock
